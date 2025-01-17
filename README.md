@@ -47,6 +47,8 @@ SuperBollo EASY è il tuo assistente personale per il calcolo del SuperBollo. Ab
 3. Avvia l'applicazione con `npm run dev`
 4. Apri il browser e vai su `http://localhost:3000`
 
+Oppure, visita il sito https://www.superbollo-easy.danilocappabianca.it
+
 ## Non perdere più tempo e denaro!
 
 Con SuperBollo EASY, trasformi un processo frustrante e soggetto a errori in un'operazione semplice e veloce. Smetti di preoccuparti di calcoli complessi, sanzioni nascoste, tassi variabili o errori nel modello F24. Lascia che SuperBollo EASY faccia il lavoro pesante per te!
