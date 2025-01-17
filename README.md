@@ -47,7 +47,7 @@ SuperBollo EASY è il tuo assistente personale per il calcolo del SuperBollo. Ab
 3. Avvia l'applicazione con `npm run dev`
 4. Apri il browser e vai su `http://localhost:3000`
 
-Oppure, visita il sito https://www.superbollo-easy.danilocappabianca.it
+Oppure, visita il sito https://superbolloeasy.danilocappabianca.it/
 
 ## Non perdere più tempo e denaro!
 
