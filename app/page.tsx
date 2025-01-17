@@ -89,25 +89,48 @@ export default function SuperBolloCalculator() {
           quality={100}
           className="opacity-30"
         />
-        <div className="container mx-auto p-4 relative z-10">
-          <Card className="w-full max-w-2xl mx-auto bg-white/90 backdrop-blur-sm">
+        <div className="w-full max-w-2xl mx-auto p-4 relative z-10">
+          <Alert variant="destructive" className="mb-6 w-full">
+  <AlertTitle>Sapevi che se calcoli l'F24 oggi e lo paghi domani, potresti avere una multa?</AlertTitle>
+  <AlertDescription>
+    <ul className="list-disc list-inside space-y-1">
+      <li>Il calcolo del SuperBollo richiede estrema precisione: anche un solo giorno di differenza può alterare significativamente il risultato.</li>
+      <li>Gli interessi vengono calcolati giorno per giorno, considerando i tassi di interesse legale che variano annualmente:</li>
+      <ul className="list-disc list-inside ml-4">
+        <li>5% nel 2023</li>
+        <li>2,5% nel 2024</li>
+        <li>2% nel 2025 e oltre</li>
+      </ul>
+      <li>Per un calcolo accurato, è necessario suddividere i giorni di ritardo per anno e applicare i rispettivi tassi.</li>
+      <li><strong>Importante:</strong> Si raccomanda vivamente di effettuare il pagamento lo stesso giorno del calcolo per evitare discrepanze e possibili sanzioni.</li>
+    </ul>
+  </AlertDescription>
+</Alert>
+
+          <Alert className="mb-6 w-full">
+            <AlertDescription>
+              <p><strong>Esempio di calcolo complesso:</strong></p>
+              <p>Per un'auto di 320 CV (235,36 kW), immatricolata 6 anni fa, con SuperBollo scaduto il 01/04/2024 e pagato il 10/01/2025:</p>
+              <ul className="list-disc list-inside mt-2">
+                <li>Imposta: €603,60 ((235,36 - 185) * €20 * 0,6)</li>
+                <li>Sanzione: €22,64 (3,75% dell'imposta per ritardo tra 91 e 365 giorni)</li>
+                <li>Interessi: €11,83 (calcolati come segue)
+                  <ul className="list-disc list-inside ml-4">
+                    <li>Dal 01/04/2024 al 31/12/2024 (275 giorni al 2,5%): €11,36</li>
+                    <li>Dal 01/01/2025 al 10/01/2025 (10 giorni al 2%): €0,47</li>
+                  </ul>
+                </li>
+                <li>Totale: €638,07</li>
+              </ul>
+              <p className="mt-2">Questo esempio mostra la complessità del calcolo, specialmente per gli interessi che si estendono su due anni con tassi diversi. Inserisci i tuoi dati nel calcolatore per ottenere un risultato preciso per la tua situazione.</p>
+            </AlertDescription>
+          </Alert>
+          <Card className="w-full bg-white/90 backdrop-blur-sm">
             <CardHeader>
               <CardTitle>Calcolatore SuperBollo</CardTitle>
               <CardDescription>Inserisci i dati per calcolare il SuperBollo e generare l'F24</CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
-            <Alert className="mb-6">
-              <AlertDescription>
-                <p><strong>Esempio di calcolo:</strong></p>
-                <p>Per un'auto di 250 kW, immatricolata 3 anni fa, con SuperBollo scaduto da 20 giorni:</p>
-                <ul className="list-disc list-inside mt-2">
-                  <li>Imposta: €1,300 ((250 - 185) * €20)</li>
-                  <li>Sanzione: €19.50 (1.5% dell'imposta)</li>
-                  <li>Interessi: calcolati in base ai tassi vigenti</li>
-                </ul>
-                <p className="mt-2">Inserisci i tuoi dati nel calcolatore per ottenere un risultato preciso.</p>
-              </AlertDescription>
-            </Alert>
               <div className="space-y-2">
                 <Label htmlFor="targa">Targa Auto</Label>
                 <Input 
@@ -294,7 +317,7 @@ export default function SuperBolloCalculator() {
               )}
             </CardContent>
           </Card>
-          <div className="mt-4 text-center text-sm text-gray-500">
+          <div className="mt-4 text-center text-sm text-gray-500 w-full">
             <p>Disclaimer: Questo calcolatore è fornito a solo scopo informativo. I risultati potrebbero non essere accurati al 100% e non sostituiscono il calcolo ufficiale. Si prega di verificare sempre con le autorità competenti per il calcolo esatto del SuperBollo.</p>
           </div>
         </div>
